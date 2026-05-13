@@ -9,10 +9,6 @@ if jq ".defaultapps | contains([0])" "$json_file" | grep -q true; then
     /installable-apps/wine.sh
 fi
 if jq ".defaultapps | contains([1])" "$json_file" | grep -q true; then
-    chmod +x /installable-apps/brave.sh
-    /installable-apps/brave.sh
-fi
-if jq ".defaultapps | contains([2])" "$json_file" | grep -q true; then
     chmod +x /installable-apps/xarchiver.sh
     /installable-apps/xarchiver.sh
 fi

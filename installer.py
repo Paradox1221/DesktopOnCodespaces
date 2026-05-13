@@ -43,8 +43,7 @@ class InstallScreen(Screen):
          Label("Default Apps (you should keep them)"),
          SelectionList[int]( 
             ("Wine", 0, True),
-            ("Brave", 1, True),
-            ("Xarchiver", 2, True),
+            ("Xarchiver", 1, True),
             id="defaultapps"
         ),),
         Vertical (
@@ -103,4 +102,3 @@ class InstallApp(App):
 if __name__ == "__main__":
     app = InstallApp()
     app.run()
-
