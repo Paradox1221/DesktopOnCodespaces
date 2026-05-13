@@ -24,9 +24,9 @@ This repository now includes:
 
 * Windows apps (wine)
 
-* Browsering (Firefox included!)
+* Browsing (Firefox included!)
 
-* Home Persistance (You keep your files!)
+* Home Persistence (You keep your files!)
 
 # Use
 

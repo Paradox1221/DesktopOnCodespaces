@@ -9,4 +9,4 @@ if [ ! -f "$HOME/.config/kscreenlockerrc" ]; then
 fi
 setterm blank 0
 setterm powerdown 0
-exec /usr/bin/dbus-launch --exit-with-session /usr/bin/startplasma-x11 > /dev/null
+exec /usr/bin/dbus-launch --exit-with-session /usr/bin/startplasma-x11 > /dev/null 2>&1
