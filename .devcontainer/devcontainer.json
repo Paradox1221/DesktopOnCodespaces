@@ -1,0 +1,24 @@
+{
+  "name": "DesktopOnCodespaces",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "8gb"
+  },
+  "forwardPorts": [
+    3000
+  ],
+  "portsAttributes": {
+    "3000": {
+      "label": "Desktop (KasmVNC/noVNC)",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "runArgs": [
+    "--shm-size=2gb",
+    "--security-opt=seccomp=unconfined"
+  ]
+}

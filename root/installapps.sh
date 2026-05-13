@@ -1,6 +1,8 @@
 #!/bin/bash
+set -euo pipefail
 
 json_file="/options.json"
+apt-get update
 
 if jq ".defaultapps | contains([0])" "$json_file" | grep -q true; then
     chmod +x /installable-apps/wine.sh

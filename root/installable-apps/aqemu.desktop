@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=AQEMU
 GenericName=QEMU & KVM Virtual Machine Manager
-Exec=sudo aqemu
+Exec=aqemu
 Terminal=false
 Type=Application
 Icon=aqemu

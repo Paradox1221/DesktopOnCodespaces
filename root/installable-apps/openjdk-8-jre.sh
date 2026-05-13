@@ -1,2 +1,4 @@
-apt update
-apt install -y openjdk-8-jre
+#!/bin/bash
+set -euo pipefail
+
+apt-get install -y openjdk-8-jre

@@ -1,3 +1,6 @@
+#!/bin/bash
+set -euo pipefail
+
 echo "**** install wine ****"
 dpkg --add-architecture i386
 apt-get update

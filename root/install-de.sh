@@ -1,3 +1,5 @@
+#!/bin/bash
+set -euo pipefail
 
 if jq ".DE" "/options.json" | grep -q "KDE Plasma (Heavy)"; then
     DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y dolphin \
@@ -21,8 +23,7 @@ if jq ".DE" "/options.json" | grep -q "KDE Plasma (Heavy)"; then
     cp /startwm-kde.sh /defaults/startwm.sh
 fi
 if jq ".DE" "/options.json" | grep -q "XFCE4 (Lightweight)"; then
-    DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y firefox \
-    mousepad \
+    DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y mousepad \
     xfce4-terminal \
     xfce4 \
     xubuntu-default-settings \
@@ -31,8 +32,7 @@ if jq ".DE" "/options.json" | grep -q "XFCE4 (Lightweight)"; then
     cp /startwm-xfce.sh /defaults/startwm.sh
 fi
 if jq ".DE" "/options.json" | grep -q "I3 (Very Lightweight)"; then
-    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends firefox \
-    i3 \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends i3 \
     i3-wm \
     stterm
     update-alternatives --set x-terminal-emulator /usr/bin/st

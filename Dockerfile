@@ -21,16 +21,12 @@ RUN \
   apt-get update && \
   DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y firefox jq wget && \
   chmod +x /install-de.sh && \
-  /install-de.sh
-
-RUN \
+  /install-de.sh && \
   chmod +x /installapps.sh && \
   /installapps.sh && \
-  rm /installapps.sh
-
-RUN \
+  rm /installapps.sh && \
   echo "**** cleanup ****" && \
-  apt-get autoclean && \
+  apt-get clean && \
   rm -rf \
     /config/.cache \
     /var/lib/apt/lists/* \

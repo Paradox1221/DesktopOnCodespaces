@@ -1,2 +1,4 @@
-apt update
-apt install -y synaptic
+#!/bin/bash
+set -euo pipefail
+
+apt-get install -y synaptic

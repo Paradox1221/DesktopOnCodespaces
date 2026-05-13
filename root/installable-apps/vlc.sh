@@ -1,2 +1,4 @@
-apt update
-apt install -y vlc
+#!/bin/bash
+set -euo pipefail
+
+apt-get install -y vlc

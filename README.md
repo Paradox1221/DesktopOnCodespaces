@@ -6,6 +6,16 @@
 
 > it also works on [gitpod](https://gitpod.io/workspaces)
 
+## Performance Defaults (Cloud Environments)
+
+This repository now includes:
+
+* Reduced Docker build overhead by consolidating package install + cleanup into one build layer.
+* Fewer package index refreshes during optional app installs (less repeated `apt update` work).
+* Lightweight default `options.json` (`I3`, minimal default apps) for faster first-time cloud startup.
+* A `.devcontainer/devcontainer.json` with cloud-friendly defaults (`--shm-size=2gb`, port 3000 auto-forward, host requirements).
+* Startup scripts that `exec` the desktop session directly to reduce wrapper process overhead.
+
 # Supported Stuff
 
 * 1080p 60fps
