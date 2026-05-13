@@ -18,7 +18,6 @@
     }
   },
   "runArgs": [
-    "--shm-size=2gb",
-    "--security-opt=seccomp=unconfined"
+    "--shm-size=2gb"
   ]
 }
